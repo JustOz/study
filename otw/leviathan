@@ -1,0 +1,31 @@
+```sh
+ssh leviathan2@leviathan.labs.overthewire.org -p 2223
+```
+
+
+```json
+{
+    leviathan2
+    mEh5PNl10e
+},
+{
+    leviathan3
+    Q0G8j4sakn
+},
+{
+    leviathan4
+    AgvropI4OA
+},
+{
+    leviathan5
+    EKKlTF1Xqs
+},
+{
+    leviathan6
+    YZ55XPVk2l
+},
+{
+    leviathan7
+    8GpZ5f8Hze
+}
+```
