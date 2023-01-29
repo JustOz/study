@@ -1,4 +1,4 @@
-# Enumerate services with `nmap 10.129.251.16 -p1,1000 -sC -sV`
+# Enumerate services with `nmap 10.129.251.16 -p1-1000 -sC -sV`
 ```
 21 ftp
 ```
