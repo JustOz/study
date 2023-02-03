@@ -17,9 +17,8 @@ Discovered open port 21/tcp on 10.129.96.142 ftp
 
 # user.txt
 ```
-8029dab4dd8ebe2d9d77b68497982925
+6497a7a6dfca846ad0e5f529840daa84
 ```
-
 
 # credentials
 ```
@@ -29,3 +28,7 @@ PrTg@dmin2019
 
 # gain shell via metasploit
 
+# root.txt
+```
+8029dab4dd8ebe2d9d77b68497982925
+```
