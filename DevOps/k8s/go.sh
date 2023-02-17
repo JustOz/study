@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-./installation-scripts/docker/docker-get.sh
-./installation-scripts/docker/docker-install.sh
+./installation-scripts/docker/get-docker.sh
+./installation-scripts/docker/install-docker.sh
 
 ./installation-scripts/k8s/get-k8s.sh
 ./installation-scripts/k8s/install-k8s.sh
