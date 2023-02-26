@@ -1,0 +1,31 @@
+domain: sequel.htb
+found dns: dc.sequel.htb
+
+nmap -Pn --script smb-enum-shares -p445 sequel.htb -vvv doesnt work
+
+smbclient -U "" -L \\\\sequel.htb\\ works
+
+smbclient -U "" \\\\sequel.htb\\Public works
+
+PDF  -> found credentials
+
+send an email to brandon (potential username)
+
+cmdkey /add:"<serverName>.sequel.htb" /user:"sequel\<userame>" /pass:<password> ??
+
+usr: PublicUser
+pwd: GuestUserCantWrite1
+
+
+[fix impacket bug - https://github.com/fortra/impacket/issues/856]
+
+mssqlclient.py PublicUser:GuestUserCantWrite1@dc.sequel.htb
+
+SELECT name, database_id, create_date FROM sys.databases;
+found `master`, `tempdb`, `model`, `msdb` databases
+
+SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'
+
+SELECT TABLE_NAME FROM master.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'
+
+select suser_sname(owner_sid) as 'Owner', state_desc, * from sys.databases
