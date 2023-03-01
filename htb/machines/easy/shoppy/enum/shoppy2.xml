@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Feb 27 12:13:35 2023 as: nmap -sC -sV -Pn -p1-10000 -vvvv -oA enum/shoppy2 shoppy.htb -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -Pn -p1-10000 -vvvv -oA enum/shoppy2 shoppy.htb" start="1677492815" startstr="Mon Feb 27 12:13:35 2023" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="10000" services="1-10000"/>
+<verbose level="4"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1677492815"/>
+<taskend task="NSE" time="1677492815"/>
+<taskbegin task="NSE" time="1677492815"/>
+<taskend task="NSE" time="1677492815"/>
+<taskbegin task="NSE" time="1677492815"/>
+<taskend task="NSE" time="1677492815"/>
+<taskbegin task="Connect Scan" time="1677492815"/>
+<taskend task="Connect Scan" time="1677492821" extrainfo="10000 total ports"/>
+<taskbegin task="Service scan" time="1677492821"/>
+<taskend task="Service scan" time="1677492920" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1677492920"/>
+<taskend task="NSE" time="1677492923"/>
+<taskbegin task="NSE" time="1677492923"/>
+<taskend task="NSE" time="1677492924"/>
+<taskbegin task="NSE" time="1677492924"/>
+<taskend task="NSE" time="1677492924"/>
+<host starttime="1677492815" endtime="1677492924"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.235.35" addrtype="ipv4"/>
+<hostnames>
+<hostname name="shoppy.htb" type="user"/>
+<hostname name="shoppy.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="9997">
+<extrareasons reason="conn-refused" count="9997"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.4p1 Debian 5+deb11u1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.23.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.23.1</cpe></service><script id="http-favicon" output="Unknown favicon MD5: D5F0A0ADD0BFBB2BC51607F78ECE2F57"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.23.1"><elem>nginx/1.23.1</elem>
+</script><script id="http-title" output="            Shoppy Wait Page        "><elem key="title">&#xa;            Shoppy Wait Page&#xa;        </elem>
+</script></port>
+<port protocol="tcp" portid="9093"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="copycat" servicefp="SF-Port9093-TCP:V=7.80%I=7%D=2/27%Time=63FC8266%P=x86_64-pc-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,152D,&quot;HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/plain;\x20version=0\.0\.4;\x20charset=utf-8\r\nDate:\x20Mon,\x2027\x20Feb\x202023\x2010:13:58\x20GMT\r\n\r\n#\x20HELP\x20go_gc_cycles_automatic_gc_cycles_total\x20Count\x20of\x20completed\x20GC\x20cycles\x20generated\x20by\x20the\x20Go\x20runtime\.\n#\x20TYPE\x20go_gc_cycles_automatic_gc_cycles_total\x20counter\ngo_gc_cycles_automatic_gc_cycles_total\x2038\n#\x20HELP\x20go_gc_cycles_forced_gc_cycles_total\x20Count\x20of\x20completed\x20GC\x20cycles\x20forced\x20by\x20the\x20application\.\n#\x20TYPE\x20go_gc_cycles_forced_gc_cycles_total\x20counter\ngo_gc_cycles_forced_gc_cycles_total\x200\n#\x20HELP\x20go_gc_cycles_total_gc_cycles_total\x20Count\x20of\x20all\x20completed\x20GC\x20cycles\.\n#\x20TYPE\x20go_gc_cycles_total_gc_cycles_total\x20counter\ngo_gc_cycles_total_gc_cycles_total\x2038\n#\x20HELP\x20go_gc_duration_seconds\x20A\x20summary\x20of\x20the\x20pause\x20duration\x20of\x20garbage\x20collection\x20cycles\.\n#\x20TYPE\x20go_gc_duration_seconds\x20summary\ngo_gc_duration_seconds{quantile=\&quot;0\&quot;}\x202\.7398e-05\ngo_gc_duration_seconds{quantile=\&quot;0\.25\&quot;}\x206\.8499e-05\ngo_gc_d&quot;)%r(HTTPOptions,2A5A,&quot;HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/plain;\x20version=0\.0\.4;\x20charset=utf-8\r\nDate:\x20Mon,\x2027\x20Feb\x202023\x2010:13:58\x20GMT\r\n\r\n#\x20HELP\x20go_gc_cycles_automatic_gc_cycles_total\x20Count\x20of\x20completed\x20GC\x20cycles\x20generated\x20by\x20the\x20Go\x20runtime\.\n#\x20TYPE\x20go_gc_cycles_automatic_gc_cycles_total\x20counter\ngo_gc_cycles_automatic_gc_cycles_total\x2038\n#\x20HELP\x20go_gc_cycles_forced_gc_cycles_total\x20Count\x20of\x20completed\x20GC\x20cycles\x20forced\x20by\x20the\x20application\.\n#\x20TYPE\x20go_gc_cycles_forced_gc_cycles_total\x20counter\ngo_gc_cycles_forced_gc_cycles_total\x200\n#\x20HELP\x20go_gc_cycles_total_gc_cycles_total\x20Count\x20of\x20all\x20completed\x20GC\x20cycles\.\n#\x20TYPE\x20go_gc_cycles_total_gc_cycles_total\x20counter\ngo_gc_cycles_total_gc_cycles_total\x2038\n#\x20HELP\x20go_gc_duration_seconds\x20A\x20summary\x20of\x20the\x20pause\x20duration\x20of\x20garbage\x20collection\x20cycles\.\n#\x20TYPE\x20go_gc_duration_seconds\x20summary\ngo_gc_duration_seconds{quantile=\&quot;0\&quot;}\x202\.7398e-05\ngo_gc_duration_seconds{quantile=\&quot;0\.25\&quot;}\x206\.8499e-05\ngo_gc_d&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/plain; version=0.0.4; charset=utf-8&#xa;    Date: Mon, 27 Feb 2023 10:13:58 GMT&#xa;    HELP go_gc_cycles_automatic_gc_cycles_total Count of completed GC cycles generated by the Go runtime.&#xa;    TYPE go_gc_cycles_automatic_gc_cycles_total counter&#xa;    go_gc_cycles_automatic_gc_cycles_total 38&#xa;    HELP go_gc_cycles_forced_gc_cycles_total Count of completed GC cycles forced by the application.&#xa;    TYPE go_gc_cycles_forced_gc_cycles_total counter&#xa;    go_gc_cycles_forced_gc_cycles_total 0&#xa;    HELP go_gc_cycles_total_gc_cycles_total Count of all completed GC cycles.&#xa;    TYPE go_gc_cycles_total_gc_cycles_total counter&#xa;    go_gc_cycles_total_gc_cycles_total 38&#xa;    HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.&#xa;    TYPE go_gc_duration_seconds summary&#xa;    go_gc_duration_seconds{quantile=&quot;0&quot;} 2.7398e-05&#xa;    go_gc_duration_seconds{quantile=&quot;0.25&quot;} 6.8499e-05&#xa;    go_gc_d"><elem key="GenericLines">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request</elem>
+<elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/plain; version=0.0.4; charset=utf-8&#xa;    Date: Mon, 27 Feb 2023 10:13:58 GMT&#xa;    HELP go_gc_cycles_automatic_gc_cycles_total Count of completed GC cycles generated by the Go runtime.&#xa;    TYPE go_gc_cycles_automatic_gc_cycles_total counter&#xa;    go_gc_cycles_automatic_gc_cycles_total 38&#xa;    HELP go_gc_cycles_forced_gc_cycles_total Count of completed GC cycles forced by the application.&#xa;    TYPE go_gc_cycles_forced_gc_cycles_total counter&#xa;    go_gc_cycles_forced_gc_cycles_total 0&#xa;    HELP go_gc_cycles_total_gc_cycles_total Count of all completed GC cycles.&#xa;    TYPE go_gc_cycles_total_gc_cycles_total counter&#xa;    go_gc_cycles_total_gc_cycles_total 38&#xa;    HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.&#xa;    TYPE go_gc_duration_seconds summary&#xa;    go_gc_duration_seconds{quantile=&quot;0&quot;} 2.7398e-05&#xa;    go_gc_duration_seconds{quantile=&quot;0.25&quot;} 6.8499e-05&#xa;    go_gc_d</elem>
+</script></port>
+</ports>
+<times srtt="68349" rttvar="3244" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1677492924"/>
+<taskend task="NSE" time="1677492924"/>
+<taskbegin task="NSE" time="1677492924"/>
+<taskend task="NSE" time="1677492924"/>
+<taskbegin task="NSE" time="1677492924"/>
+<taskend task="NSE" time="1677492924"/>
+<runstats><finished time="1677492924" timestr="Mon Feb 27 12:15:24 2023" elapsed="108.93" summary="Nmap done at Mon Feb 27 12:15:24 2023; 1 IP address (1 host up) scanned in 108.93 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

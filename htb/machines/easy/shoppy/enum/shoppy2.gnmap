@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Mon Feb 27 12:13:35 2023 as: nmap -sC -sV -Pn -p1-10000 -vvvv -oA enum/shoppy2 shoppy.htb
+# Ports scanned: TCP(10000;1-10000) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.235.35 (shoppy.htb)	Status: Up
+Host: 10.129.235.35 (shoppy.htb)	Ports: 22/open/tcp//ssh//OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)/, 80/open/tcp//http//nginx 1.23.1/, 9093/open/tcp//copycat?///	Ignored State: closed (9997)
+# Nmap done at Mon Feb 27 12:15:24 2023 -- 1 IP address (1 host up) scanned in 108.93 seconds
