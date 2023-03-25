@@ -1,0 +1,5 @@
+panda.htb ~ 10.129.240.138
+
+not vhost, not subdomain, nothing with url enum
+
+check UDP ports!

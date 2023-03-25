@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  mdb-1-rs0:
+    container_name: mdb-1-rs0
+    image: mongo:latest
+    volumes:
+      - ./mdb-1:/data/db
+      - ./replica-set-init.sh:/scripts/replica-set-init.sh
+    networks:
+      - mdb-rs0-network
+    ports:
+      - 27021:27021
+    links:
+      - mdb-2-rs0
+      - mdb-3-rs0
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0", "--port", "27021"]
+
+  mdb-2-rs0:
+    container_name: mdb-2-rs0
+    image: mongo:latest
+    volumes:
+      - ./mdb-2:/data/db
+    networks:
+      - mdb-rs0-network
+    ports:
+      - 27022:27022
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0", "--port", "27022"]
+
+  mdb-3-rs0:
+    container_name: mdb-3-rs0
+    image: mongo:latest
+    volumes:
+      - ./mdb-3:/data/db
+    networks:
+      - mdb-rs0-network
+    ports:
+      - 27023:27023
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0", "--port", "27023" ]
+
+
+networks:
+  mdb-rs0-network:
+    driver: bridge

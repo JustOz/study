@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  mdb:
+    container_name: "mongo-database-1"
+    image: "mongo:latest"
+    command: mongod --quiet
+    volumes:
+      - /home/jello/home-mongo/mongo-data-1:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mdbadmin
+      - MONGO_INITDB_ROOT_PASSWORD=parisian
+    ports:
+      - "27017:27017"
+    restart: always

