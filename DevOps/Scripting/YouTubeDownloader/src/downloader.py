@@ -2,7 +2,8 @@ import yt_dlp
 import os
 
 
-SRC_FILE = "./sources.txt"
+BASE_DIR = os.path.dirname(__file__)
+SRC_FILE = f"{BASE_DIR}/sources.txt"
 
 
 def list_parser(src_file: str):
@@ -29,7 +30,7 @@ def list_parser(src_file: str):
 
 
 def download(video_url: str, catagory: str, name: str):
-    if os.path.exists(f"./Downloads/{catagory}/{name}.m4a"):
+    if os.path.exists(f"{BASE_DIR}/Downloads/{catagory}/{name}.m4a"):
         print(f"{name} exists... skipping")
         return
 
@@ -40,7 +41,7 @@ def download(video_url: str, catagory: str, name: str):
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'm4a',
         }],
-        'outtmpl': f"./Downloads/{catagory}/{name}" + '.%(ext)s',
+        'outtmpl': f"{BASE_DIR}/Downloads/{catagory}/{name}" + '.%(ext)s',
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl: 
