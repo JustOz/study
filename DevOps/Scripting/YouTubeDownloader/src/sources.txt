@@ -1,6 +1,26 @@
-https://www.youtube.com/watch?v=MIv1waQfbuA|    Classical      |"Chopin's Nocturne (arr. Tarrega) by Valentin Novak"
-https://www.youtube.com/watch?v=IQ_XsCRO3mM|    Israeli        |"Arik by Shlomi Shaban"
-https://www.youtube.com/watch?v=RnwMgnUww2s|    Guitar         |"How Deep is Your Love (cover) by Yenne Lee"
-https://www.youtube.com/watch?v=Ez62cQPYyI8|    Tango          |"Piazolla's Oblivion (arr. Nadia Kossinskaja) by Nadia"
-https://www.youtube.com/watch?v=L0tGW90J0Zs|    Tango          |"Piazolla's Verano Porteno by Alexandra Whittingham"           
-https://www.youtube.com/watch?v=sTnBObge-0Y|    Classical      |"A Moonlit Night on the Spring River by Xuefei Yang"
+https://www.youtube.com/watch?v=MIv1waQfbuA|    Guitar/Classical        |Chopin's Nocturne (arr. Tarrega) by Valentin Novak
+https://www.youtube.com/watch?v=sTnBObge-0Y|    Guitar/Classical        |A Moonlit Night on the Spring River by Xuefei Yang
+https://www.youtube.com/watch?v=xljWbyxOaH8|    Guitar/Classical        |Bach's Prelude for Lute by Kamahi Yamashita
+
+https://www.youtube.com/watch?v=RnwMgnUww2s|    Guitar/Fingerstyle      |How Deep is Your Love (cover) by Yenne Lee
+
+https://www.youtube.com/watch?v=Ez62cQPYyI8|    Tango                   |Piazolla's Oblivion (arr. Nadia Kossinskaja) by Nadia
+https://www.youtube.com/watch?v=L0tGW90J0Zs|    Tango                   |Piazolla's Verano Porteno by Alexandra Whittingham
+
+https://www.youtube.com/watch?v=IQ_XsCRO3mM|    Israeli/Shlomi Shaban   |שלומי שבן - אריק
+https://www.youtube.com/watch?v=iUzyFDOWasE|    Israeli/Shlomi Shaban   |שלומי שבן -שרמוטה פוריטנית
+https://www.youtube.com/watch?v=O0LnTrL1eK8|    Israeli/Shlomi Shaban   |שלומי שבן - ניו יורק vs יחזקאל
+
+https://www.youtube.com/watch?v=St4ZXq-Oe1w|    Israeli/Eviatar Banai   |אביתר בנאי - פתיחה
+https://www.youtube.com/watch?v=v5hV3j6ywD4|    Israeli/Eviatar Banai   |אביתר בנאי - יש לי סיכוי
+https://www.youtube.com/watch?v=Z-2oTReZWbE|    Israeli/Eviatar Banai   |אביתר בנאי - הדוב והנחש
+https://www.youtube.com/watch?v=mwFjgtidDDA|    Israeli/Eviatar Banai   |אביתר בנאי - מתי נתנשק
+https://www.youtube.com/watch?v=TK_KA25vQGs|    Israeli/Eviatar Banai   |אביתר בנאי - מנגינה יקרה
+https://www.youtube.com/watch?v=L5Qx6NFUq8w|    Israeli/Eviatar Banai   |אביתר בנאי - שמח שבאת
+https://www.youtube.com/watch?v=48qDD38_MKk|    Israeli/Eviatar Banai   |אביתר בנאי - שמתי לי פודרה
+https://www.youtube.com/watch?v=N6WZcJb2NBc|    Israeli/Eviatar Banai   |אביתר בנאי - תיאטרון רוסי
+https://www.youtube.com/watch?v=aYfDx5RDT8A|    Israeli/Eviatar Banai   |אביתר בנאי - אקדח
+https://www.youtube.com/watch?v=yt5LV29Q_X4|    Israeli/Eviatar Banai   |אביתר בנאי - כלום לא עצוב
+https://www.youtube.com/watch?v=jV795CNRqb0|    Israeli/Eviatar Banai   |אביתר בנאי - אבות ובנים
+https://www.youtube.com/watch?v=knek9TbTTEk|    Israeli/Eviatar Banai   |אביתר בנאי - תתחנני אליי
+

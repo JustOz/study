@@ -1,8 +1,5 @@
-# TODO
-# Add an option to choose the name the file is saved to - shouldn't be hard at all!
-
-
 import yt_dlp
+import os
 
 
 SRC_FILE = "./sources.txt"
@@ -20,8 +17,9 @@ def list_parser(src_file: str):
             srcs = []
 
             for _src in _srcs:
-                temp = _src.replace('  ','').split('|')
-                srcs.append(temp) 
+                if _src:
+                    temp = _src.replace('  ','').split('|')
+                    srcs.append(temp) 
 
             return srcs
     except FileNotFoundError as e:
@@ -31,6 +29,10 @@ def list_parser(src_file: str):
 
 
 def download(video_url: str, catagory: str, name: str):
+    if os.path.exists(f"./Downloads/{catagory}/{name}.m4a"):
+        print(f"{name} exists... skipping")
+        return
+
     ydl_opts = {
         'format': 'm4a/bestaudio/best',
         # ℹ️ See help(yt_dlp.postprocessor) for a list of available Postprocessors and their arguments
@@ -47,6 +49,10 @@ def download(video_url: str, catagory: str, name: str):
 
 def main():
     sources = list_parser(SRC_FILE)
+
+    # for url, catagory, name in sources:
+    #     catagory = catagory.replace('\"', '')
+    #     print(f"LINK {url}\nCATA {catagory}\nNAME {name}\n")
 
     for url, catagory, name in sources:
         download(url, catagory, name)
