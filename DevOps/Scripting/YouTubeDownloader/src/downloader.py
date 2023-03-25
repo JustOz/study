@@ -19,8 +19,9 @@ def list_parser(src_file: str):
 
             for _src in _srcs:
                 if _src:
-                    temp = _src.replace('  ','').split('|')
-                    srcs.append(temp) 
+                    if _src[0] != '#':
+                        temp = _src.replace('  ','').split('|')
+                        srcs.append(temp) 
 
             return srcs
     except FileNotFoundError as e:
@@ -36,12 +37,20 @@ def download(video_url: str, catagory: str, name: str):
 
     ydl_opts = {
         'format': 'm4a/bestaudio/best',
+        'writethumbnail': 'writethumbnail',
         # ℹ️ See help(yt_dlp.postprocessor) for a list of available Postprocessors and their arguments
-        'postprocessors': [{  # Extract audio using ffmpeg
-            'key': 'FFmpegExtractAudio',
-            'preferredcodec': 'm4a',
-        }],
+        'postprocessors': [ # Extract audio using ffmpeg
+            {
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': 'm4a'
+            },{
+                'key': 'FFmpegMetadata'
+            },{ 
+                'key': 'EmbedThumbnail',
+            }
+        ],
         'outtmpl': f"{BASE_DIR}/Downloads/{catagory}/{name}" + '.%(ext)s',
+        'forcethumbnail': True,
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl: 
@@ -56,7 +65,7 @@ def main():
     #     print(f"LINK {url}\nCATA {catagory}\nNAME {name}\n")
 
     for url, catagory, name in sources:
-        download(url, catagory, name)
+        download(url.rstrip(), catagory.rstrip(), name.rstrip())
 
 
 if __name__=='__main__':
